@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Button } from './Button';
 import { MagneticButton } from './MagneticButton';
 import { useRef, useEffect } from 'react';

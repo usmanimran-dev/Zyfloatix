@@ -88,7 +88,7 @@ export const Testimonials = () => {
                 </motion.div>
 
                 <div className="testimonials-grid grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-                    {testimonials.map((testimonial, index) => (
+                    {testimonials.map((testimonial, _index) => (
                         <motion.div
                             key={testimonial.name}
                             className="testimonial-card group bg-cardBg rounded-2xl p-8 relative perspective-1000"
@@ -158,7 +158,7 @@ export const Testimonials = () => {
                         <p className="text-textSecondary text-sm uppercase tracking-wide">Trusted by Leading Brands</p>
                     </motion.div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-                        {clients.map((client, index) => (
+                        {clients.map((client, _index) => (
                             <motion.div
                                 key={client}
                                 className="client-logo flex items-center justify-center h-20 bg-cardBg rounded-lg group cursor-pointer"

@@ -81,7 +81,7 @@ export const Services = () => {
                 </div>
 
                 <div className="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {services.map((svc, index) => {
+                    {services.map((svc, _index) => {
                         const Icon = svc.icon;
                         return (
                             <motion.div
