@@ -8,26 +8,31 @@ const services = [
         title: 'Custom Websites',
         description: 'Bespoke website development tailored to your brand and business goals with modern design.',
         icon: Globe,
+        stack: ['React', 'Next.js', 'Tailwind CSS']
     },
     {
         title: 'Web Applications',
         description: 'Scalable web apps built with cutting-edge technology for exceptional performance.',
         icon: Code,
+        stack: ['Node.js', 'PostgreSQL', 'TypeScript']
     },
     {
         title: 'WordPress Development',
         description: 'Custom WordPress sites with powerful themes, plugins, and seamless content management.',
         icon: Smartphone,
+        stack: ['PHP', 'MySQL', 'Elementor']
     },
     {
         title: 'Shopify E-Commerce',
         description: 'Complete Shopify stores optimized for conversions and stunning shopping experiences.',
         icon: ShoppingCart,
+        stack: ['Liquid', 'React', 'Shopify API']
     },
     {
         title: 'Website Maintenance',
         description: 'Ongoing support, updates, and optimization to keep your site running at peak performance.',
         icon: Wrench,
+        stack: ['SEO', 'Performance', 'Security']
     },
 ];
 
@@ -42,23 +47,21 @@ export const Services = () => {
         const ctx = gsap.context(() => {
             //  Stagger reveal for service cards
             gsap.from('.service-card', {
-                y: 80,
-                opacity: 0,
-                duration: 1,
+                y: 40,
+                duration: 0.8,
                 stagger: 0.12,
-                ease: 'power3.out',
+                ease: 'power2.out',
                 scrollTrigger: {
                     trigger: '.services-grid',
-                    start: 'top 80%',
+                    start: 'top 85%',
                 },
             });
 
             // Heading animation
             gsap.from('.services-heading', {
-                y: 50,
-                opacity: 0,
+                y: 30,
                 duration: 0.8,
-                ease: 'power3.out',
+                ease: 'power2.out',
             });
         }, sectionRef);
 
@@ -86,52 +89,33 @@ export const Services = () => {
                         return (
                             <motion.div
                                 key={svc.title}
-                                className="service-card group relative bg-cardBg rounded-2xl p-8 cursor-pointer"
-                                whileHover={{
-                                    y: -10,
-                                    rotateX: 5,
-                                    rotateY: 5,
-                                    scale: 1.02,
-                                }}
-                                transition={{
-                                    duration: 0.3,
-                                    ease: [0.25, 0.1, 0.25, 1],
-                                }}
-                                style={{
-                                    transformStyle: 'preserve-3d',
-                                }}
+                                className="service-card flex flex-col group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-mint/30 transition-all duration-300 hover:bg-white/10 cursor-pointer overflow-hidden"
+                                whileHover={{ y: -5 }}
+                                transition={{ duration: 0.3 }}
                             >
-                                {/* Gradient Border Effect */}
-                                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-royalBlue to-mint opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-
                                 {/* Icon Container */}
-                                <motion.div
-                                    className="w-16 h-16 rounded-xl bg-gradient-to-br from-royalBlue to-blue-500 p-3 mb-6"
-                                    whileHover={{
-                                        scale: 1.1,
-                                        rotate: 5,
-                                    }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <Icon className="w-full h-full text-white" />
-                                </motion.div>
+                                <div className="w-14 h-14 rounded-xl bg-mint/10 border border-mint/20 text-mint flex items-center justify-center mb-6 group-hover:bg-mint group-hover:text-darkNavy transition-colors duration-300">
+                                    <Icon className="w-7 h-7" />
+                                </div>
 
                                 {/* Content */}
-                                <h3 className="text-2xl font-bold mb-3 text-textDark group-hover:text-royalBlue transition-colors duration-300">
+                                <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-mint transition-colors duration-300">
                                     {svc.title}
                                 </h3>
 
-                                <p className="text-gray-600 leading-relaxed mb-6">
+                                <p className="text-white/70 leading-relaxed mb-6 flex-grow">
                                     {svc.description}
                                 </p>
 
-                                {/* Hover Arrow */}
-                                <div className="flex items-center text-sm font-semibold text-mint opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2">
-                                    Learn More
-                                    <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                    </svg>
+                                {/* Tech Stack */}
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {svc.stack.map(tech => (
+                                        <span key={tech} className="text-xs font-medium text-white/50 bg-white/5 px-2.5 py-1 rounded-md border border-white/5">
+                                            {tech}
+                                        </span>
+                                    ))}
                                 </div>
+
                             </motion.div>
                         );
                     })}

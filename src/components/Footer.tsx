@@ -10,10 +10,10 @@ export const Footer = () => {
                     <div className="md:col-span-2">
                         <div className="flex items-center space-x-2 mb-4">
                             <div className="w-10 h-10 bg-gradient-to-br from-royalBlue to-mint rounded-lg flex items-center justify-center shadow-glow-mint">
-                                <span className="text-white font-bold text-xl font-display">F</span>
+                                <span className="text-white font-bold text-xl font-display">U</span>
                             </div>
                             <h3 className="text-2xl font-bold text-white font-display">
-                                Fluxion
+                                Usman Imran
                             </h3>
                         </div>
                         <p className="text-textSecondary mb-6 max-w-md">
@@ -23,7 +23,7 @@ export const Footer = () => {
                             {[
                                 { icon: Twitter, href: '#', label: 'Twitter' },
                                 { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                                { icon: Github, href: '#', label: 'GitHub' },
+                                { icon: Github, href: 'https://github.com/usmanimran-dev', label: 'GitHub', target: '_blank', rel: 'noopener noreferrer' },
                                 { icon: Instagram, href: '#', label: 'Instagram' },
                             ].map((social) => {
                                 const Icon = social.icon;
@@ -31,6 +31,8 @@ export const Footer = () => {
                                     <motion.a
                                         key={social.label}
                                         href={social.href}
+                                        target={social.target || '_self'}
+                                        rel={social.rel || ''}
                                         whileHover={{ scale: 1.1, y: -2 }}
                                         className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 hover:border-mint hover:bg-mint/10 flex items-center justify-center transition-all duration-300"
                                         aria-label={social.label}
@@ -65,22 +67,22 @@ export const Footer = () => {
                         <h4 className="text-white font-bold mb-4 font-display">Contact</h4>
                         <ul className="space-y-3 text-textSecondary">
                             <li className="hover:text-mint transition-colors duration-300">
-                                <a href="mailto:hello@agency.com">hello@agency.com</a>
+                                <a href="mailto:Webappdevelopersofchicago@gmail.com">Webappdevelopersofchicago@gmail.com</a>
                             </li>
                             <li className="hover:text-mint transition-colors duration-300">
-                                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                                <a href="tel:+923259283582">+92 3259283582</a>
                             </li>
-                            <li>San Francisco, CA</li>
+                            <li>Chicago, IL</li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-textSecondary text-sm">
-                        © {new Date().getFullYear()} Fluxion. All rights reserved.
+                        © {new Date().getFullYear()} Usman Imran. All rights reserved.
                     </p>
                     <p className="text-textSecondary text-sm flex items-center gap-2">
-                        Made with <Heart className="w-4 h-4 text-mint fill-current animate-pulse" /> by the Fluxion team
+                        Made with <Heart className="w-4 h-4 text-mint fill-current animate-pulse" /> by Usman Imran
                     </p>
                 </div>
             </div>

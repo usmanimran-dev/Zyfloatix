@@ -30,8 +30,8 @@ export const Contact = () => {
             {/* Ambient Background */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-royalBlue/10 via-darkNavy to-black pointer-events-none" />
 
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+            <div className="container mx-auto px-6 max-w-7xl relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
                     {/* Left Column: Typography & Info */}
                     <div className="space-y-12">
                         <div>
@@ -52,16 +52,16 @@ export const Contact = () => {
                         <div className="space-y-8">
                             <div className="contact-reveal">
                                 <span className="block text-sm text-mint mb-2 font-mono tracking-wider">EMAIL US</span>
-                                <a href="mailto:hello@fluxion.dev" className="text-2xl md:text-3xl font-medium text-white hover:text-mint transition-colors inline-flex items-center gap-2 group">
-                                    hello@fluxion.dev
-                                    <ArrowUpRight className="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                <a href="mailto:Webappdevelopersofchicago@gmail.com" className="text-xl md:text-2xl font-medium text-white hover:text-mint transition-colors inline-flex items-center gap-2 group break-all">
+                                    Webappdevelopersofchicago@gmail.com
+                                    <ArrowUpRight className="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform flex-shrink-0" />
                                 </a>
                             </div>
 
                             <div className="contact-reveal">
                                 <span className="block text-sm text-mint mb-2 font-mono tracking-wider">CALL US</span>
-                                <a href="tel:+15551234567" className="text-2xl md:text-3xl font-medium text-white hover:text-mint transition-colors inline-flex items-center gap-2 group">
-                                    +1 (555) 123-4567
+                                <a href="tel:+923259283582" className="text-2xl md:text-3xl font-medium text-white hover:text-mint transition-colors inline-flex items-center gap-2 group">
+                                    +92 3259283582
                                     <ArrowUpRight className="w-6 h-6 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </a>
                             </div>
@@ -69,31 +69,31 @@ export const Contact = () => {
                     </div>
 
                     {/* Right Column: Minimal Form */}
-                    <form ref={formRef} className="space-y-8 pt-4">
-                        <div className="contact-reveal space-y-1">
-                            <label className="text-sm text-textSecondary ml-4">01. What's your name?</label>
+                    <form ref={formRef} className="space-y-8 lg:pl-10">
+                        <div className="contact-reveal">
+                            <label className="block text-sm font-medium tracking-widest text-mint uppercase mb-3">01. What's your name?</label>
                             <input
                                 type="text"
                                 placeholder="John Doe *"
-                                className="w-full bg-transparent border-b border-white/10 p-4 text-xl text-white placeholder-white/20 focus:border-mint focus:outline-none transition-colors"
+                                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 md:p-5 text-white placeholder-white/20 focus:border-mint focus:bg-white/10 focus:outline-none transition-all shadow-sm"
                             />
                         </div>
 
-                        <div className="contact-reveal space-y-1">
-                            <label className="text-sm text-textSecondary ml-4">02. What's your email?</label>
+                        <div className="contact-reveal">
+                            <label className="block text-sm font-medium tracking-widest text-mint uppercase mb-3">02. What's your email?</label>
                             <input
                                 type="email"
                                 placeholder="john@example.com *"
-                                className="w-full bg-transparent border-b border-white/10 p-4 text-xl text-white placeholder-white/20 focus:border-mint focus:outline-none transition-colors"
+                                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 md:p-5 text-white placeholder-white/20 focus:border-mint focus:bg-white/10 focus:outline-none transition-all shadow-sm"
                             />
                         </div>
 
-                        <div className="contact-reveal space-y-1">
-                            <label className="text-sm text-textSecondary ml-4">03. Tell us about your project</label>
+                        <div className="contact-reveal">
+                            <label className="block text-sm font-medium tracking-widest text-mint uppercase mb-3">03. Tell us about your project</label>
                             <textarea
                                 rows={4}
-                                placeholder="I need a website for..."
-                                className="w-full bg-transparent border-b border-white/10 p-4 text-xl text-white placeholder-white/20 focus:border-mint focus:outline-none transition-colors resize-none"
+                                placeholder="I need a custom software solution for..."
+                                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 md:p-5 text-white placeholder-white/20 focus:border-mint focus:bg-white/10 focus:outline-none transition-all resize-none shadow-sm"
                             />
                         </div>
 

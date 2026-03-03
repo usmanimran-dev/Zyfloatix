@@ -24,25 +24,25 @@ export const About = () => {
                     >
                         <div className="inline-flex items-center px-4 py-2 rounded-full bg-mint/10 border border-mint/20 backdrop-blur-sm mb-6">
                             <Sparkles className="text-mint mr-2" size={16} />
-                            <span className="text-mint font-medium text-sm">About Us</span>
+                            <span className="text-mint font-medium text-sm">About Me</span>
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                            Crafting Digital Solutions
-                            <span className="block gradient-text">That Drive Growth</span>
+                            Bridging complex logic
+                            <span className="block gradient-text">with clean code.</span>
                         </h2>
 
                         <p className="text-white text-lg mb-6 leading-relaxed">
-                            Fluxion is a premium web development agency specializing in creating powerful, scalable digital solutions. We combine expert development with strategic thinking to build websites and web applications that deliver real business results.
+                            Specialized in architecting scalable Full-Stack applications and delivering high-impact software solutions.
                         </p>
 
                         <p className="text-textSecondary text-lg leading-relaxed mb-8">
-                            From custom websites to complex web applications, WordPress to Shopify, we bring your vision to life with clean code, modern design, and ongoing support.
+                            Designing robust, data-driven systems leveraging Modern Web Frameworks and AWS Cloud Architecture to engineer systems that empower users and drive innovation.
                         </p>
 
                         <div className="flex items-center gap-4">
                             <div className="h-1 w-20 bg-gradient-to-r from-royalBlue to-mint rounded-full"></div>
-                            <span className="text-textSecondary font-medium">Trusted by industry leaders</span>
+                            <span className="text-textSecondary font-medium">To engineer systems that empower users and drive innovation.</span>
                         </div>
                     </motion.div>
 

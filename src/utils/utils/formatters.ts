@@ -1,0 +1,34 @@
+/**
+ * Converts a string title into a URL-friendly slug.
+ * Example: "My Cool Project!" => "my-cool-project"
+ */
+export const generateSlug = (title: string): string => {
+    return title
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/[\s_-]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+};
+
+/**
+ * Formats a Supabase timestamp string into a readable date.
+ * Example: "2024-02-24T00:00:00Z" => "Feb 24, 2024"
+ */
+export const formatDate = (timestamp: string): string => {
+    return new Date(timestamp).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+    });
+};
+
+/**
+ * Returns an estimated reading time for a given text.
+ * Example: "240 words" => "~2 min read"
+ */
+export const readingTime = (content: string): string => {
+    const words = content.trim().split(/\s+/).length;
+    const minutes = Math.ceil(words / 200);
+    return `${minutes} min read`;
+};

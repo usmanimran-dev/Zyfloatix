@@ -82,13 +82,13 @@ export function Header() {
                                 style={{ backgroundSize: "200% 200%" }}
                                 transition={{ duration: 0.5 }}
                             >
-                                {/* Letter Z with modern styling */}
+                                {/* Letter U with modern styling */}
                                 <motion.span
                                     className="text-white font-bold text-2xl font-display relative z-10"
                                     whileHover={{ scale: 1.1 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    Z
+                                    U
                                 </motion.span>
 
                                 {/* Accent dot */}
@@ -108,7 +108,7 @@ export function Header() {
                             whileHover={{ letterSpacing: "0.05em" }}
                             transition={{ duration: 0.3 }}
                         >
-                            Zyfloatix
+                            Usman Imran
                         </motion.span>
                     </motion.a>
 

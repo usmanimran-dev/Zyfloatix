@@ -23,8 +23,8 @@ export const Hero = () => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Floating animation for badge
-            gsap.to('.hero-badge', { y: -3, duration: 4, ease: 'power1.inOut', yoyo: true, repeat: -1 });
+            // Smooth fade-in for badge instead of bouncing
+            gsap.from('.hero-badge', { opacity: 0, scale: 0.9, duration: 1, ease: 'power3.out', delay: 0.2 });
 
             // Stagger animation for hero content
             gsap.from('.hero-content-item', {
@@ -110,20 +110,19 @@ export const Hero = () => {
                 <div className="hero-badge hero-content-item flex items-center justify-center mb-8">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-royalBlue/10 border border-royalBlue/20 backdrop-blur-sm">
                         <Sparkles className="text-mint mr-2" size={20} />
-                        <span className="text-textSecondary font-medium uppercase tracking-wide text-sm">Premium Web Development Agency</span>
+                        <span className="text-textSecondary font-medium uppercase tracking-wide text-sm">Full-Stack Developer</span>
                     </div>
                 </div>
 
                 {/* Main Headline with 3D effect */}
                 <h1 className="hero-content-item text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight perspective-1000">
-                    <span className="block text-white transform transition-transform duration-700 hover:scale-105">Build Your</span>
-                    <span className="block gradient-text transform transition-transform duration-700 hover:scale-105">Dream Website</span>
+                    <span className="block text-white transform transition-transform duration-700 hover:scale-105">Software</span>
+                    <span className="block gradient-text transform transition-transform duration-700 hover:scale-105">Engineer & Developer</span>
                 </h1>
 
                 {/* Subheadline */}
                 <p className="hero-content-item text-xl md:text-2xl text-textSecondary mb-12 max-w-3xl mx-auto leading-relaxed">
-                    Custom web solutions that drive results. From sleek websites to powerful web apps,
-                    we build digital experiences that grow your business.
+                    Building scalable, modern web & mobile applications — transforming complex logic into intuitive products.
                 </p>
 
                 {/* CTA Buttons with magnetic effect */}
@@ -138,7 +137,7 @@ export const Hero = () => {
                                 if (element) element.scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            Start Your Project
+                            Hire Me
                             <ArrowRight className="ml-2 inline-block group-hover:translate-x-1 transition-transform" size={20} />
                         </Button>
                     </MagneticButton>
